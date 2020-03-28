@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>birthpetcheck</title>
+</head>
+<body>
+<SCRIPT language=JavaScript>
+
+function getpet () {
+        var toyear = 1997;
+        var birthyear = document.frm.inyear.value;
+        var birthpet="Ox"
+        x = (toyear - birthyear) % 12
+        if ((x == 1) || (x == -11)) {
+            birthpet="mouse"      }
+            else  {
+             if (x == 0)             {
+             birthpet="cow"           }
+             else  {
+              if ((x == 11) || (x == -1)) {
+              birthpet="tiger"          }
+              else  {
+               if ((x == 10) || (x == -2)) {
+               birthpet="rabbit"         }
+               else  {
+                if ((x == 9) || (x == -3))  {
+                birthpet="dragon"         }
+                else  {
+                 if ((x == 8) || (x == -4))  {
+                 birthpet="snake"      }
+                 else  {
+                  if ((x == 7) || (x == -5))  {
+                  birthpet="horse"      }
+                  else  {
+                   if ((x == 6) || (x == -6))  {
+                   birthpet="sheep"      }
+                   else  {
+                    if ((x == 5) || (x == -7))  {
+                    birthpet="monkey"     }
+                    else  {
+                     if ((x == 4) || (x == -8))  {
+                     birthpet="chicken"    }
+                     else  {
+                      if ((x == 3) || (x == -9))  {
+                      birthpet="dog"        }
+                      else  {
+                       if ((x == 2) || (x == -10))  {
+                       birthpet="pig"         }
+                      }
+                     }
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+        document.frm.birth.value = birthpet;
+}
+</SCRIPT>
+<FORM name=frm>
+birthyear:<INPUT name=inyear size=4 value= >
+   <BR><INPUT onclick=getpet() type=button value="what is your birthpet">
+     <INPUT name=birth size=9></FORM>
+</body>
+</html>
